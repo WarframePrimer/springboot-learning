@@ -19,3 +19,18 @@ Spring Boot可以轻松创建单独的，基于生产级的Spring应用程序，
           <artifactId>spring-boot-starter-web</artifactId>
       </dependency>
 ```
+2.创建Application.java
+```
+@RestController
+@EnableAutoConfiguration
+public class Application{
+  @RequestMapping("/")
+  String index(){
+    return "hello Spring Boot!";
+  }
+  
+  public static void main(String[] args) throws Exception{
+    SpringApplication.run(Application.class,args);
+  } 
+}
+```
