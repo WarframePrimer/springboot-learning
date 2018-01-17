@@ -34,3 +34,35 @@ public class Application{
   } 
 }
 ```
+3.Run ,执行Application.main()或者mvn:spring-boot:run  
+到此为止，就快速的构建、部署、启动了一个web应用。  
+
+下面是Spring Boot官方关于构建web项目的项目结构建议：  
+```
+src
+  com
+  +- warframe
+     +- myproject
+        +- Application.java //建议位于项目的根目录，这可以简化@ComponentAScan
+        |
+        +- domain(pojo|bean)
+        |  +- Customer.java（这里只是举个例子）
+        |  +- Repository.java
+        |
+        +- service
+        |  +-CustomerService.java
+        |
+        +- web
+           +- CustomerController.java
+   resources
+   +- config //配置文件
+      application.properties
+   +- static //静态文件
+      +- css
+      +- js
+      +- images
+      index.html
+   +- templates //模板文件
+ pom.xml
+```
+
