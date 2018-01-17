@@ -6,5 +6,16 @@ Spring Boot可以轻松创建单独的，基于生产级的Spring应用程序，
 1.配置项目的pom.xml
 
 ```
-搭石
+  <!--SpringBoot启动父依赖-->
+  <parent>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>1.5.8.RELEASE</version>
+  </parent>
+  
+  <!--SpringBoot Web依赖-->
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
 ```
