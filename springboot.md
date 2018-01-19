@@ -66,3 +66,15 @@ src
  pom.xml
 ```
 
+SpringBoot提供了对应用进行自动化配置。相比之前XML配置方式，很多显式方式声明是不需要的。、  
+SpringBoot不单单从application.properties中获取配置：  
+-- 1.命令行参数  
+-- 2.java:comp/env 里的JNDI属性 
+-- 3.JVM系统属性  
+-- 4.操作系统环境变量  
+-- 5.RandomValuePropertySource 属性类生成的random.*属性  
+-- 6.应用以外的application.properties文件  
+-- 7.打包在应用内的application.properties文件  
+-- 8.在应用@Configuration配置类中，用@PropertySource注解声明的属性文件  
+-- 9.SpringApplication.setDefaultProperties声明的默认属性  
+
